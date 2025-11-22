@@ -1,16 +1,16 @@
 /* Base Styles */
 :root {
-    --primary-color: #007bff; /* Bright Blue */
+    --primary-color: #13c1f6;   /* Royal Blue */
     --secondary-color: #2c3e50; /* Dark Blue/Black for buttons */
-    --accent-color: #f39c12; /* A touch of Gold for accent */
+    --accent-color: #f39c12;    /* Gold for attractive elements */
     --text-light: #ffffff;
     --text-dark: #333333;
-    --background-blue: #00bfff; /* Sky Blue background, like your image */
+    --background-blue: #958708; /* Deep Royal Blue Background */
     --font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #c5b367;
+    background-color: var(--background-blue);
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 600px; /* Max width for a clean look on desktop */
+    max-width: 600px; 
     margin: 30px auto;
     padding: 0;
 }
@@ -46,7 +46,7 @@ body {
 
 .profile-header h1 {
     font-size: 1.8em;
-    font-weight: 700;
+    font-weight: 800;
     margin: 5px 0 0;
 }
 
@@ -79,15 +79,14 @@ body {
 }
 
 .icon-link:hover {
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-3px) scale(1.1);
 }
 
-.instagram { background-color: #E1306C; } /* Instagram gradient color */
-.whatsapp { background-color: #25D366; } /* WhatsApp green */
-.google-g { background-color: #DB4437; } /* Google red */
+.instagram { background-color: #E1306C; } 
+.whatsapp { background-color: #25D366; } 
+.google-g { background-color: #DB4437; } 
 
-
-/* Link Buttons */
+/* Link Buttons General Style */
 .link-buttons {
     display: flex;
     flex-direction: column;
@@ -96,7 +95,9 @@ body {
 }
 
 .btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 15px 20px;
     background-color: var(--secondary-color);
     color: var(--text-light);
@@ -104,26 +105,50 @@ body {
     text-align: center;
     border-radius: 10px;
     font-weight: 600;
-    font-size: 1.1em;
-    letter-spacing: 1px;
+    font-size: 1.0em;
+    letter-spacing: 0.5px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.2s;
-    border: 2px solid var(--secondary-color); /* Initial border */
+    border: 2px solid var(--secondary-color); 
 }
 
 .btn:hover {
     background-color: var(--primary-color);
     transform: translateY(-2px);
-    border-color: var(--accent-color); /* Highlight on hover */
+    border-color: var(--accent-color); 
 }
 
 .btn-icon {
     margin-right: 10px;
 }
 
+/* Animation for attention */
+@keyframes shake {
+    0%, 100% { transform: scale(1.05); }
+    10%, 30%, 50%, 70%, 90% { transform: scale(1.05) rotate(1deg); }
+    20%, 40%, 60%, 80% { transform: scale(1.05) rotate(-1deg); }
+}
+
+/* Attractive FREE SITE VISIT Button Specific Style */
+.free-visit-btn {
+    background-color: var(--accent-color) !important; 
+    color: var(--secondary-color) !important; 
+    border: 3px solid var(--text-light) !important; /* White border for extra pop */
+    font-weight: 800 !important;
+    font-size: 1.2em !important; 
+    animation: shake 2s ease-in-out infinite; /* Animation applied */
+}
+
+.free-visit-btn:hover {
+    background-color: #e67e22 !important; 
+    transform: scale(1.08) !important; 
+    animation: none; /* Stop animation on hover */
+}
+
+
 /* Professional Showcase Section */
 .showcase {
-    background-color: #f7f7f7; /* Light background for contrast */
+    background-color: #f7f7f7; 
     padding: 25px;
     border-radius: 12px;
     text-align: center;
@@ -168,7 +193,7 @@ body {
 }
 
 .showcase-btn:hover {
-    background-color: #e67e22; /* Darker accent on hover */
+    background-color: #e67e22; 
     transform: none;
 }
 
@@ -177,7 +202,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    margin-top: auto; /* Pushes the footer to the bottom */
+    margin-top: auto; 
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.8em;
 }
