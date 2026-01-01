@@ -206,3 +206,47 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.8em;
 }
+/* Service Form Styling */
+.white-form-box {
+    background-color: #ffffff; /* Saffed Background */
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #333333; /* Dark text for readability */
+}
+
+.white-form-box h3 {
+    text-align: center;
+    color: #0D47A1;
+    margin-bottom: 20px;
+}
+
+.white-form-box label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: 600;
+}
+
+.white-form-box input, 
+.white-form-box select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Submit Button inside white form */
+.submit-now-btn {
+    background-color: #25D366 !important; /* Green color for submit */
+    width: 100%;
+    margin-top: 20px;
+    border: none !important;
+}
+
+.form-btn {
+    background-color: #34495e !important;
+}

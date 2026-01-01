@@ -70,7 +70,56 @@ Preferred Date:" target="_blank" class="btn free-visit-btn">
                 <i class="fas fa-globe btn-icon"></i> VISIT WEBSITE
             </a>
 
+
+            <button onclick="toggleServiceForm()" class="btn form-btn">
+    <i class="fas fa-tools btn-icon"></i> Local Service 
+</button>
+
+<div id="serviceFormContainer" class="white-form-box" style="display: none;">
+    <form action="https://formspree.io/f/xrbyabwd" method="POST">
+        <h3>Service Request Form</h3>
+        
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="91XXXXXXXXXX" required>
+
+        <label>Which Service do you need?</label>
+        <select name="service" required>
+            <option value="">-- Choose a Service --</option>
+            <option value="Electrician">Electrician Work</option>
+            <option value="AC Service">AC Service & Repair</option>
+            <option value="Plumber">Plumbing Work</option>
+            <option value="Plumber">Furniture Work</option>
+            <option value="Plumber">Penting Work</option>
+            <option value="Plumber">Civil Work</option>
+            <option value="Ceiling">Ceiling / Interior</option>
+            <option value="Maintenance">General Maintenance</option>
+        </select>
+
+        <label>Your Location</label>
+        <input type="text" name="location" placeholder="Area / City">
+
+        <button type="submit" class="btn submit-now-btn">SUBMIT REQUEST</button>
+    </form>
+</div>
+
+<script>
+function toggleServiceForm() {
+    var formBox = document.getElementById("serviceFormContainer");
+    if (formBox.style.display === "none") {
+        formBox.style.display = "block";
+    } else {
+        formBox.style.display = "none";
+    }
+}
+</script>
+
         </div>
+
+         
+
 
         <section class="showcase">
             <h2>AKBAR ALI INTERIOR</h2>
