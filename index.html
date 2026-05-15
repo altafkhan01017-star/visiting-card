@@ -2,192 +2,550 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKBAR ALI INTERIOR - Ceiling & Interior Experts</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AKBAR ALI INTERIOR | Luxury Interior & Ceiling Design</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#0b0b0b;
+color:white;
+overflow-x:hidden;
+}
+
+/* Background */
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.88)),
+url('img3.jpeg');
+background-size:cover;
+background-position:center;
+z-index:-1;
+filter:blur(2px);
+}
+
+/* Container */
+
+.container{
+width:92%;
+max-width:450px;
+margin:auto;
+padding:25px 0 50px;
+}
+
+/* Header */
+
+.profile-header{
+text-align:center;
+padding:20px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+backdrop-filter:blur(15px);
+box-shadow:0 0 35px rgba(0,0,0,0.5);
+}
+
+.logo{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #d4af37;
+box-shadow:0 0 30px rgba(212,175,55,0.5);
+margin-bottom:15px;
+}
+
+.profile-header h1{
+font-size:28px;
+font-weight:800;
+letter-spacing:1px;
+margin-bottom:8px;
+}
+
+.subtitle{
+font-size:14px;
+color:#d4af37;
+font-weight:500;
+letter-spacing:1px;
+}
+
+/* Slider */
+
+.slider{
+width:100%;
+overflow:hidden;
+border-radius:25px;
+margin-top:25px;
+border:2px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.slides{
+display:flex;
+width:300%;
+animation:slide 12s infinite;
+}
+
+.slides img{
+width:100%;
+height:400px;
+object-fit:cover;
+}
+
+@keyframes slide{
+0%{margin-left:0;}
+30%{margin-left:0;}
+35%{margin-left:-100%;}
+60%{margin-left:-100%;}
+65%{margin-left:-200%;}
+70%{margin-left:-200%;}
+100%{margin-left:0;}
+}
+
+/* Buttons */
+
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+width:100%;
+padding:16px;
+margin-top:16px;
+border-radius:18px;
+text-decoration:none;
+font-weight:700;
+font-size:15px;
+letter-spacing:0.5px;
+transition:0.4s;
+border:none;
+cursor:pointer;
+}
+
+/* Gold Luxury Button */
+
+.gold-btn{
+background:linear-gradient(135deg,#d4af37,#f5d06f);
+color:black;
+box-shadow:0 10px 25px rgba(212,175,55,0.35);
+}
+
+.gold-btn:hover{
+transform:translateY(-4px) scale(1.02);
+}
+
+/* Glass Button */
+
+.glass-btn{
+background:rgba(255,255,255,0.08);
+color:white;
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+}
+
+.glass-btn:hover{
+background:#d4af37;
+color:black;
+transform:translateY(-3px);
+}
+
+/* Call Buttons */
+
+.action-buttons{
+display:flex;
+gap:12px;
+margin-top:18px;
+}
+
+.call{
+background:#25d366;
+color:#111;
+}
+
+.whatsapp{
+background:#25d366;
+color:#111;
+}
+
+/* Social */
+
+.social-icons{
+display:flex;
+justify-content:center;
+gap:18px;
+margin-top:25px;
+}
+
+.icon-link{
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+font-size:22px;
+color:white;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.icon-link:hover{
+transform:translateY(-5px) scale(1.1);
+background:#d4af37;
+color:black;
+}
+
+/* Showcase */
+
+.showcase{
+margin-top:35px;
+padding:25px;
+background:rgba(255,255,255,0.05);
+border-radius:28px;
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+}
+
+.showcase h2{
+text-align:center;
+font-size:25px;
+margin-bottom:10px;
+}
+
+.showcase p{
+text-align:center;
+color:#d8d8d8;
+margin-bottom:25px;
+font-size:14px;
+line-height:24px;
+}
+
+.showcase-img{
+width:100%;
+border-radius:20px;
+margin-top:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+transition:0.4s;
+}
+
+.showcase-img:hover{
+transform:scale(1.03);
+}
+
+/* Review */
+
+.review-box{
+width:92%;
+max-width:450px;
+margin:25px auto;
+padding:25px;
+text-align:center;
+background:linear-gradient(135deg,#1a1a1a,#111);
+border-radius:25px;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.review-box h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.stars{
+font-size:32px;
+color:#ffd700;
+letter-spacing:4px;
+margin-bottom:10px;
+}
+
+/* Form */
+
+.white-form-box{
+background:white;
+padding:22px;
+border-radius:22px;
+margin-top:18px;
+}
+
+.white-form-box h3{
+color:black;
+margin-bottom:18px;
+text-align:center;
+}
+
+.white-form-box label{
+display:block;
+margin-bottom:8px;
+font-size:14px;
+color:black;
+font-weight:600;
+}
+
+.white-form-box input,
+.white-form-box select{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:1px solid #ddd;
+margin-bottom:18px;
+font-size:14px;
+outline:none;
+}
+
+.submit-now-btn{
+background:black;
+color:white;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:25px 10px;
+font-size:13px;
+color:#bdbdbd;
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+.profile-header h1{
+font-size:24px;
+}
+
+.showcase h2{
+font-size:21px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <div class="container">
-        <header class="profile-header">
-            <img src="logo 1.jpg" alt="AKBAR ALI INTERIOR Logo" class="logo">
-            <h1>AKBAR ALI INTERIOR</h1>
-<div class="subtitle">Expert in Modern Ceiling & Interior Design</div>
+<div class="container">
 
-        </header>
+<header class="profile-header">
+
+<img src="logo 1.jpg" class="logo">
+
+<h1>AKBAR ALI INTERIOR</h1>
+
+<div class="subtitle">
+Crafting Elegant Spaces With Premium Finishing 
+</div>
+
+</header>
+
+<!-- Slider -->
 
 <div class="slider">
 <div class="slides">
-<img src="img2.jpeg">
-<img src="img4.jpeg">
-<img src="img7.jpeg">
+
+<img src="img02.jpeg">
+<img src="img01.jpeg">
+<img src="img03.jpeg">
+
 </div>
-</div><br> <br> 
-
-
-<div>
-<a href="tel:8356855616" class="btn call">📞 Call Now</a>
-<a href="https://wa.me/919930433186" class="btn whatsapp">💬 WhatsApp</a>
 </div>
 
-<div class="review-box">
-<h3>Customer Rating</h3>
-<a href="https://g.page/r/CQkAOi_-l7ugEBM/review" target="_blank" style="text-decoration:none;">
-<div class="stars">★★★★★</div>
+<!-- Call Buttons -->
+
+<div class="action-buttons">
+
+<a href="tel:8356855616" class="btn call">
+<i class="fas fa-phone"></i> Call Now
 </a>
-<p>4.8 Google Rating </p>
- <p>Delivering Premium Ceiling & Interior Solutions Across India</p>
+
+<a href="https://wa.me/919930433186" class="btn whatsapp">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
 </div>
 
+<!-- Social -->
 
-        <div class="social-icons">
-            <a href="https://www.instagram.com/akbaraliinterior?igsh=ZWtuc293cjRqdzFu" target="_blank"
-                class="icon-link instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/919930433186" target="_blank" class="icon-link whatsapp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://share.google/TxZnj2wWT44bBN6l6" target="_blank" class="icon-link google-g">
-                <i class="fab fa-google"></i>
-            </a>
-        </div>
+<div class="social-icons">
 
-        <div class="link-buttons">
+<a href="https://www.instagram.com/akbaraliinterior?igsh=ZWtuc293cjRqdzFu" class="icon-link" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
 
-            <a href="https://wa.me/919930433186?text=Hello Akbar Ali Interior, I want to schedule a FREE Site Visit and consultation.
+<a href="https://wa.me/919930433186" class="icon-link" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
-*My Project Details*
-Project Type: 
-Location: 
-Preferred Date:" target="_blank" class="btn free-visit-btn">
-                 GET FREE SITE VISIT
-            </a>
+<a href="https://g.page/r/CQkAOi_-l7ugEBM/review" class="icon-link" target="_blank">
+<i class="fab fa-google"></i>
+</a>
 
-            <a href="https://www.instagram.com/akbaraliinterior?igsh=ZWtuc293cjRqdzFu" target="_blank" class="btn">
-                <i class="fab fa-instagram btn-icon"></i> INSTAGRAM
-            </a>
-            <a href="https://g.page/r/CQkAOi_-l7ugEBM/review" target="_blank" class="btn">
-                <i class="fas fa-star btn-icon"></i> REVIEWS
-            </a>
-            <a href="https://wa.me/919930433186" target="_blank" class="btn">
-                <i class="fas fa-phone-alt btn-icon"></i> CONTACT US
-            </a>
+</div>
 
-            <a href="mailto:akbaraliinterior9197@gmail.com" class="btn email-btn">
-                <i class="fas fa-envelope btn-icon"></i> EMAIL US
-            </a>
+<!-- Main Buttons -->
 
-            <a href="https://wa.me/919930433186?text=Hello, I have a general query regarding your Ceiling and Interior services." target="_blank" class="btn whatsapp-btn">
-                <i class="fab fa-whatsapp btn-icon"></i> WHATSAPP CHAT
-            </a>
+<a href="https://wa.me/919930433186?text=Hello Akbar Ali Interior, I want to schedule a FREE Site Visit and consultation." target="_blank" class="btn gold-btn">
+<i class="fas fa-crown"></i> BOOK FREE SITE VISIT
+</a>
 
-            <a href="https://share.google/TxZnj2wWT44bBN6l6" target="_blank" class="btn">
-                <i class="fab fa-google btn-icon"></i> Visit On Google
-            </a>
+<a href="https://www.instagram.com/akbaraliinterior?igsh=ZWtuc293cjRqdzFu" target="_blank" class="btn glass-btn">
+<i class="fab fa-instagram"></i> INSTAGRAM
+</a>
 
-            <a href="https://altafkhan01017-star.github.io/akbar-ali/" target="_blank" class="btn website-btn">
-                <i class="fas fa-globe btn-icon"></i> VISIT WEBSITE
-            </a>
+<a href="https://g.page/r/CQkAOi_-l7ugEBM/review" target="_blank" class="btn glass-btn">
+<i class="fas fa-star"></i> GOOGLE REVIEWS
+</a>
 
+<a href="mailto:akbaraliinterior9197@gmail.com" class="btn glass-btn">
+<i class="fas fa-envelope"></i> EMAIL US
+</a>
 
-            <button onclick="toggleServiceForm()" class="btn form-btn">
-    <i class="fas fa-tools btn-icon"></i> Local Service 
+<a href="https://altafkhan01017-star.github.io/akbar-ali/" target="_blank" class="btn glass-btn">
+<i class="fas fa-globe"></i> VISIT WEBSITE
+</a>
+
+<a href="https://drive.google.com/file/d/1xqOlU0jy1bv1Pc18wK4OEiCUOfOj8K_C/view?usp=drivesdk" target="_blank" class="btn glass-btn">
+<i class="fas fa-images"></i> VIEW PORTFOLIO
+</a>
+
+<a href="https://drive.google.com/file/d/1rbvDblB0e8uUbiLjWPZ5GQWZvIpXH39k/view?usp=drivesdk" target="_blank" class="btn glass-btn">
+<i class="fas fa-cube"></i> VIEW 3D PROJECTS
+</a>
+
+<!-- Form Button -->
+
+<button onclick="toggleServiceForm()" class="btn gold-btn">
+<i class="fas fa-tools"></i> LOCAL SERVICE
 </button>
 
-<div id="serviceFormContainer" class="white-form-box" style="display: none;">
-    <form action="https://formspree.io/f/xrbyabwd" method="POST">
-        <h3>Service Request Form</h3>
-        
-        <label>Your Name</label>
-        <input type="text" name="name" placeholder="Enter your name" required>
+<!-- Form -->
 
-        <label>Phone Number</label>
-        <input type="tel" name="phone" placeholder="91XXXXXXXXXX" required>
+<div id="serviceFormContainer" class="white-form-box" style="display:none;">
 
-        <label>Which Service do you need?</label>
-        <select name="service" required>
-            <option value="">-- Choose a Service --</option>
-            <option value="Electrician">Electrician Work</option>
-            <option value="AC Service">AC Service & Repair</option>
-            <option value="Plumber">Plumbing Work</option>
-            <option value="Plumber">Furniture Work</option>
-            <option value="Plumber">Penting Work</option>
-            <option value="Plumber">Civil Work</option>
-            <option value="Ceiling">Ceiling / Interior</option>
-            <option value="Maintenance">General Maintenance</option>
-        </select>
+<form action="https://formspree.io/f/xrbyabwd" method="POST">
 
-        <label>Your Location</label>
-        <input type="text" name="location" placeholder="Area / City">
+<h3>Service Request Form</h3>
 
-        <button type="submit" class="btn submit-now-btn">SUBMIT REQUEST</button>
-    </form>
-</div>
+<label>Your Name</label>
+<input type="text" name="name" placeholder="Enter Your Name" required>
 
-<form action="https://formsubmit.co/altafkhan01017@gmail.com" method="POST">
-<h3>Book Free Site Visit</h3>
+<label>Phone Number</label>
+<input type="tel" name="phone" placeholder="91XXXXXXXXXX" required>
 
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="tel" name="Phone" placeholder="Mobile Number" required>
-<input type="text" name="City" placeholder="City" required>
+<label>Select Service</label>
 
-<!-- Hidden Settings -->
-<input type="hidden" name="_subject" value="New Site Visit Booking - Akbar Ali Interior">
-<input type="hidden" name="_captcha" value="false">
+<select name="service" required>
 
-<br>
-<button class="submit-btn">Submit</button>
+<option value="">Choose Service</option>
+<option>Electrician Work</option>
+<option>AC Service & Repair</option>
+<option>Plumbing Work</option>
+<option>Furniture Work</option>
+<option>Painting Work</option>
+<option>Civil Work</option>
+<option>Ceiling / Interior</option>
+<option>General Maintenance</option>
+
+</select>
+
+<label>Your Location</label>
+<input type="text" name="location" placeholder="Area / City">
+
+<button type="submit" class="btn submit-now-btn">
+SUBMIT REQUEST
+</button>
+
 </form>
 
+</div>
+
+<!-- Showcase -->
+
+<section class="showcase">
+
+<h2>Transforming Spaces Into Luxury Experiences</h2>
+
+<p>
+Premium Interior Solutions Crafted With Modern Design,
+Luxury Finishing & Professional Execution.
+</p>
+
+<img src="img04.jpeg" class="showcase-img">
 
 
+<img src="show.jpeg" class="showcase-img">
+
+</section>
+
+</div>
+
+<!-- Review -->
+
+<div class="review-box">
+
+<h3>Customer Satisfaction</h3>
+
+<a href="https://g.page/r/CQkAOi_-l7ugEBM/review" target="_blank" style="text-decoration:none;">
+
+<div class="stars">★★★★★</div>
+
+</a>
+
+<p>5.0 Google Rating</p>
+
+<br>
+
+<p>Your Vision • Our Passion</p>
+
+</div>
+
+<footer>
+
+© 2025 AKBAR ALI INTERIOR — All Rights Reserved
+
+</footer>
 
 <script>
-function toggleServiceForm() {
-    var formBox = document.getElementById("serviceFormContainer");
-    if (formBox.style.display === "none") {
-        formBox.style.display = "block";
-    } else {
-        formBox.style.display = "none";
-    }
+
+function toggleServiceForm(){
+
+var formBox = document.getElementById("serviceFormContainer");
+
+if(formBox.style.display === "none"){
+formBox.style.display = "block";
+}else{
+formBox.style.display = "none";
 }
+
+}
+
 </script>
 
-        </div>
-
-         
-
-
-        <section class="showcase">
-        <h2>Ceiling & Interior Design Excellence</h2>
-            <p>Transforming  Your Dreams Into Reality</p>
-            <div class="media-placeholder">
-                <img src="service 2.jpeg" alt="Stylish Interior Design" class="showcase-img">
-            </div>
-
-            <div class="media-placeholder">
-                <img src="thanks.jpg" alt="Stylish Interior Design" class="showcase-img">
-            </div>
-
-
-
-
-            <a href="https://drive.google.com/file/d/1xqOlU0jy1bv1Pc18wK4OEiCUOfOj8K_C/view?usp=drivesdk"
-                target="_blank" class="btn showcase-btn">View Our Full Portfolio</a>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2025 AKBAR ALI INTERIOR. All rights reserved.</p>
-    </footer>
-
 </body>
-
 </html>
